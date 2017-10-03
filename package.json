@@ -1,6 +1,10 @@
 {
   "name": "express_api",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "private": true,
   "description": "",
   "main": "server.js",
   "keywords": [],
