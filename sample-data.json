@@ -1,0 +1,121 @@
+db.myinfo.insert({
+    "name": "Montgomery Hatch",
+    "title": "Digital Portfolio",
+    "position_title": "Web Developer and Front-End Engineer",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "http://www.linkedin.com/pub/montgomery-hatch/10/a4/72a"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/m-hatch"
+      }
+    ]
+  }
+)
+
+db.navigation.insert({
+    "links": [
+      {
+        "name": "About",
+        "url": "#About"
+      },
+      {
+        "name": "Projects",
+        "url": "#Projects"
+      },
+      {
+        "name": "Contact",
+        "url": "#Contact"
+      }
+    ]
+  }
+)
+
+db.about.insert({
+    "img": "profile.png",
+    "description": "<p>Hello, my name is Monte.</p><p>I'm a Web Developer with a passion for front-end technologies. I love learning and building cool things. Right now, some of my interests are React-Redux, ES6, Webpack, NodeJS, and Angular.</p><p>When not coding, I can be found performing on the stages of Lincoln Center and Carnegie Hall (and occasionally in a Broadway pit) as a classical musician. I'm also a voracious reader of fiction, and a not-very-good surfer.</p>",
+    "skills_heading": "My Expertise",
+    "skills_description": "I love working with all aspects of the development process.",
+    "expertise": [
+      {
+        "is_empty": false,
+        "icon": "fa-code",
+        "area": "Front-End",
+        "description": "I am comfortable with a variety of Javascript frameworks including React, AngularJS, or just plain vanilla Javascript! I use front end build tools such as Gulp and Webpack for asset bundling and optimization. I follow the latest developments and trends in CSS and use Sass for preprocessing, and naming strategies such as BEM for maximum maintainablility."
+      },
+      {
+        "is_empty": false,
+        "icon": "fa-database",
+        "area": "Back-End",
+        "description": "On the back end, I build REST APIs in Java, NodeJS, PHP, and ColdFusion, using Spring Boot, Jersey, Express, and Slim PHP. I also use server side languages like JSP/JSTL and PHP for templating in traditional MVC frameworks. I am familar with database design, SQL, and NoSQL, and connect my APIs to databases in Oracle, Postgres, MySQL, and MongoDB."
+      },
+      {
+        "is_empty": false,
+        "icon": "fa-file-text-o",
+        "area": "CMS",
+        "description": "I have worked extensively with content management systems, both as a developer and in administration roles. I am a certified Hippo CMS Developer and have also worked with Wordpress, Savvy CMS and custom built solutions. Whether you have an enterprise level CMS or need a small custom application, I'm your man!"
+      },
+      {
+        "is_empty": true
+      },
+      {
+        "is_empty": false,
+        "icon": "fa-comments",
+        "area": "Communication",
+        "description": "I believe communication is one of the most important skills you can have as a developer. With over 10 years of experience in collaborative organizations and teaching postions, I am equally comfortable taking a leadership or following role. I also have excellent written and verbal communication skills."
+      },
+      {
+        "is_empty": true
+      }
+    ]
+  }
+)
+
+db.portfolio.insert({
+  "projects": [
+    {
+      "name": "Bachovich Music Publications",
+      "img": "bmp.png",
+      "img_alt": "alt desc",
+      "tagline": "E-commerce website for Bachovich Music Publications.",
+      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
+      "github": "repository",
+      "link": "website"
+    },
+    {
+      "name": "Hook & Loop",
+      "img": "hl.jpg",
+      "img_alt": "alt desc 2",
+      "tagline": "Website for Hook & Loop, the creative agency of Infor.",
+      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
+      "github": "my/repository",
+      "link": "website2"
+    },
+    {
+      "name": "Pronto",
+      "img": "pronto.jpg",
+      "img_alt": "alt desc",
+      "tagline": "E-commerce website for Bachovich Music Publications.",
+      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
+      "github": "repository",
+      "link": "website"
+    },
+    {
+      "name": "Promiscuities",
+      "img": "promiscuities.png",
+      "img_alt": "alt desc 2",
+      "tagline": "Website for Hook & Loop, the creative agency of Infor.",
+      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
+      "github": "my/repository",
+      "link": "website2"
+    }
+  ]}
+)
+
+db.contact.insert({
+    "heading": "Want to work together?",
+    "text": "I am currently accepting new offers and would love to hear about yours. Please take a moment to tell me about it."
+  }
+)
