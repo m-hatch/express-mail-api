@@ -1,5 +1,6 @@
 var express = require('express');
-var nodemailer = require('nodemailer');
+var sgHelper = require('sendgrid').mail;
+var sendgrid = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
 var mailRoute = express.Router();
 
@@ -11,26 +12,40 @@ mailRoute.post('/', function(request, response) {
         + 'Company: ' + request.body.company + ';\r\n'
         + 'Message: ' + request.body.message;
 
-    var transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'hatch.api1',
-        pass: 'randomPass123'
-      }
-    });
-
+    // config mail options
     var mailOptions = {
-      from: 'email',
-      to: 'hatch@acm.org',
+      from: new sgHelper.Email('hatch.api@donotreply.com'),
+      to: new sgHelper.Email('hatch.montgomery@gmail.com'),
       subject: 'Digital Portfolio Email',
-      text: mailBody
+      content: new sgHelper.Content('text/plain', mailBody)
     };
 
-    transporter.sendMail(mailOptions, function(error, info){
-      (error) ? console.log(error) : response.json({ message: "contact form received"});
+    var mail = new sgHelper.Mail(
+      mailOptions.from, 
+      mailOptions.subject, 
+      mailOptions.to, 
+      mailOptions.content
+    );
+
+    // send request
+    var request = sendgrid.emptyRequest({
+      method: 'POST',
+      path: '/v3/mail/send',
+      body: mail.toJSON(),
     });
 
-    
+    sendgrid.API(request, function(error, info) {
+      if (error) {
+        response.json({ message: "error sending message"});
+        console.log(error);
+      } else {
+        response.json({ message: "contact form received"});
+      } 
+      console.log(info.statusCode);
+      console.log(info.body);
+      console.log(info.headers);
+    });
+
 });
 
 module.exports = mailRoute;
